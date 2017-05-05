@@ -1,0 +1,29 @@
+2017-05-05 14:41:56,206459 DEBUG [default] [int qMain(int, char**)] [main.cpp:26] Printing qstack 
+2017-05-05 14:41:58,090567 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 8.70851e-009
+2017-05-05 14:41:58,090567 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:42:01,120740 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 5.90935e-009
+2017-05-05 14:42:01,120740 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:42:02,089796 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 4.66528e-009
+2017-05-05 14:42:02,090796 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:08,964053 DEBUG [default] [int qMain(int, char**)] [main.cpp:26] Printing qstack 
+2017-05-05 14:44:10,188123 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/1.jpg
+2017-05-05 14:44:10,477139 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 1.7106e-008
+2017-05-05 14:44:10,477139 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:18,283586 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/10.jpg
+2017-05-05 14:44:18,312587 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 6.22037e-009
+2017-05-05 14:44:18,312587 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:20,023685 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/11.jpg
+2017-05-05 14:44:20,107690 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 1.05746e-008
+2017-05-05 14:44:20,107690 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:21,309759 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/12.jpg
+2017-05-05 14:44:21,448767 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 4.66528e-009
+2017-05-05 14:44:21,448767 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:22,444824 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/13.jpg
+2017-05-05 14:44:22,520828 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 5.28731e-009
+2017-05-05 14:44:22,520828 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:23,396878 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/14.jpg
+2017-05-05 14:44:23,529886 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 4.97629e-009
+2017-05-05 14:44:23,529886 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0
+2017-05-05 14:44:24,162922 DEBUG [default] [void MainWindow::on_m_btnNext_clicked()] [mainwindow.cpp:103] D:/Document/opencv-train/FaceDetect/image/15.jpg
+2017-05-05 14:44:24,235926 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:79] detect time is: 5.28731e-009
+2017-05-05 14:44:24,235926 DEBUG [default] [void MainWindow::detectFace(cv::Mat&, QVector<QRect>&)] [mainwindow.cpp:81] detect %d faces.0

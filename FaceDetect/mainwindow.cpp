@@ -3,6 +3,10 @@
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+
+#include "easylogging++.h"
+
+
 using namespace cv;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -12,16 +16,16 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    findImgFiles("image/");
+    findImgFiles("D:/Document/opencv-train/FaceDetect/image/");
 
     if(m_cFaceCade.load("../haarcascades/haarcascade_frontalface_alt.xml"))
     {
-        qCritical()<<"load the model failed!";
+        LOG(ERROR)<<"load the model failed!";
         return;
     }
     if(m_cEyeCade.load("../haarcascades/haarcascade_eye.xml"))
     {
-        qCritical()<<"load the model failed!";
+        LOG(ERROR)<<"load the model failed!";
         return;
     }
 }
@@ -41,19 +45,18 @@ void MainWindow::findImgFiles(QString path)
     dir.setFilter(QDir::Files | QDir::NoSymLinks);
 
     QFileInfoList list = dir.entryInfoList();
-    if(list.count() <= 0)
+    if(list.size() <= 0)
     {
         return;
     }
 
-    for(int i=0; i<list.count(); i++)
+    for(int i=0; i<list.size(); i++)
     {
         QFileInfo info = list.at(i);
         QString suffix = info.suffix();
         if(QString::compare(suffix, QString("jpg"), Qt::CaseInsensitive) == 0)
         {
             m_vecFileName.append(info.absoluteFilePath());
-//            qDebug()<< info.absoluteFilePath();
         }
     }
 }
@@ -73,9 +76,9 @@ void MainWindow::detectFace(Mat &input, QVector<QRect> &faces)
     double time = (double)getTickCount();
     m_cFaceCade.detectMultiScale(gray, face, 1.1, 3, 0|CV_HAAR_SCALE_IMAGE, Size(30,30));
     time = (double)getTickCount() - time;
-    qDebug()<<"detect time is: " << time/((double)getTickFrequency()*1000.);
+    LOG(DEBUG)<<"detect time is: " << time/((double)getTickFrequency()*1000.);
 
-    qDebug()<<face.size();
+    LOG(DEBUG)<<"detect %d faces."<<face.size();
 
     vector<Rect>::const_iterator iter;
     for(iter = face.begin(); iter != face.end(); ++iter)
@@ -92,10 +95,14 @@ void MainWindow::detectFace(Mat &input, QVector<QRect> &faces)
 
 void MainWindow::on_m_btnNext_clicked()
 {
+    if(m_iImgIndex >= m_vecFileName.size())
+    {
+
+    }
     QString file = m_vecFileName.at(m_iImgIndex);
-    qDebug()<<file;
+    LOG(DEBUG)<<file;
     m_iImgIndex++;
-    if(m_iImgIndex >= m_vecFileName.count())
+    if(m_iImgIndex >= m_vecFileName.size())
     {
         m_iImgIndex = 0;
     }
@@ -103,7 +110,7 @@ void MainWindow::on_m_btnNext_clicked()
     m_matInput = imread(file.toStdString());
     if(m_matInput.empty())
     {
-        qCritical()<<"load the image failed!";
+        LOG(ERROR)<<"load the image file failed!";
     }
     //detect faces
     QVector<QRect> faces;
@@ -117,7 +124,7 @@ void MainWindow::on_m_btnNext_clicked()
     for(int i=0; i<faces.count(); i++)
     {
         painter.drawRect(faces.at(i));
-        qDebug()<<faces.at(i).x()<<faces.at(i).y()<<faces.at(i).width()<<faces.at(i).height();
+        LOG(DEBUG)<<"the face"<<i<<faces.at(i).x()<<faces.at(i).y()<<faces.at(i).width()<<faces.at(i).height();
     }
 
     ui->m_lbShow->setPixmap(QPixmap::fromImage(img));

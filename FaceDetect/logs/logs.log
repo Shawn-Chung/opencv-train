@@ -1,0 +1,8 @@
+2017-05-05 14:41:56,205459 INFO [default] First log
+2017-05-05 14:41:56,206459 INFO [default] Second log
+2017-05-05 14:41:56,206459 INFO [default] This interval log will be logged with every thread, this one is from thread #
+2017-05-05 14:41:56,206459 INFO [default] This log is only for thread 2 and is ran by thread #
+2017-05-05 14:44:08,963053 INFO [default] First log
+2017-05-05 14:44:08,964053 INFO [default] Second log
+2017-05-05 14:44:08,964053 INFO [default] This interval log will be logged with every thread, this one is from thread #
+2017-05-05 14:44:08,964053 INFO [default] This log is only for thread 2 and is ran by thread #

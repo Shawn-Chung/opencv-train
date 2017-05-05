@@ -18,6 +18,13 @@ TEMPLATE = app
 DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_NO_DEBUG_OUTPUT
 
+DEFINES += ELPP_QT_LOGGING    \
+#          ELPP_FEATURE_ALL \
+#          ELPP_STL_LOGGING   \
+#          ELPP_STRICT_SIZE_CHECK ELPP_UNICODE \
+#          ELPP_MULTI_LOGGER_SUPPORT \
+#          ELPP_THREAD_SAFE
+
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -25,7 +32,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    logs/easylogging++.cc
 
 HEADERS  += mainwindow.h
 
